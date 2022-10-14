@@ -123,6 +123,44 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &114160552 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100002, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
+  m_PrefabInstance: {fileID: 258216225}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &114160562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114160552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b74d2af429033ba45b0a732f49361a89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player_Plane: {fileID: 114160552}
+  Plane_Propeller: {fileID: 0}
+  Plane_Speed: 20
+  Plane_Rotation: 3
+  Plane_Elevation: 0
+  Throttle_Speed: 5
+  Prop_Speed: 0
+  Gravity_Speed: 0.5
+--- !u!114 &114160563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114160552}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1127929012899f24f8b4b0fe10a9eafd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Gravity_Speed: 10
 --- !u!1001 &258216225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -136,7 +174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9999615
+      value: 0.9998516
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
       propertyPath: m_LocalRotation.x
@@ -144,11 +182,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.008778992
+      value: 0.01722932
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 1.006
+      value: 1.974
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
       propertyPath: m_RootOrder
@@ -160,39 +198,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.02
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -72.8
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99998844
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0017791634
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000007962325
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0044752676
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.204
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0.513
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
@@ -418,7 +456,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638539985}
   m_LocalRotation: {x: -0.06703599, y: -0, z: -0, w: 0.99775064}
-  m_LocalPosition: {x: 10.283, y: 3.22, z: 2.08}
+  m_LocalPosition: {x: 10.283, y: 2.7, z: -62.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -437,8 +475,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07fbc4dd725bc284487e371587d2c29a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player_Plane: {fileID: 0}
-  FP_Location: {fileID: 0}
+  Player_Plane: {fileID: 114160552}
+  FP_Location: {fileID: 638539985}
   FP_Offset: {x: 0, y: 2, z: 2}
 --- !u!1001 &998527202
 PrefabInstance:

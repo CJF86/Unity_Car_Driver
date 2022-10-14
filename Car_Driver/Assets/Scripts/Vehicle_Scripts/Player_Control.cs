@@ -19,7 +19,7 @@ public class Player_Control : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -31,10 +31,10 @@ public class Player_Control : MonoBehaviour
 
         if (Input.GetKey("w") == true)
         {
-            transform.Translate(Vector3.forward*Time.deltaTime*Car_Speed);
+            transform.Translate(Vector3.forward * Time.deltaTime * Car_Speed);
 
         }
-        else if(Input.GetKey("s") == true)
+        else if (Input.GetKey("s") == true)
         {
             transform.Translate(Vector3.forward * Time.deltaTime * -Car_Speed);
         }
@@ -43,14 +43,14 @@ public class Player_Control : MonoBehaviour
         {
             transform.Rotate(Vector3.up * Time.deltaTime * Turn_Speed);
         }
-        else if(Input.GetKey("a") == true)
+        else if (Input.GetKey("a") == true)
         {
             transform.Rotate(Vector3.up * Time.deltaTime * -Turn_Speed);
         }
 
-        
-        
-        
+
+
+
     }
 
     float Speed_Control()
@@ -69,6 +69,4 @@ public class Player_Control : MonoBehaviour
 
         return Car_Speed;
     }
-
- 
 }
