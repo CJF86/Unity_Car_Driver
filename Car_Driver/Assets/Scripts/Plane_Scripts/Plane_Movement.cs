@@ -20,10 +20,11 @@ public class Plane_Movement : MonoBehaviour
 
     private Vector3 True_Rotation = new Vector3(0, 0, 0);
 
-    public float Prop_Speed = 50;
+    public float Prop_Speed;
 
     public float Gravity_Speed = 3f;
 
+    
 
     // Start is called before the first frame update
     void Start()
@@ -105,7 +106,7 @@ public class Plane_Movement : MonoBehaviour
     public void Propellor_Rotation()
         //handles the animation of the plane propellor
     {
-        //Prop_Speed = Plane_Speed * 2;
+        Prop_Speed = 50;
         Plane_Propeller.transform.Rotate(Vector3.forward * Time.deltaTime * Prop_Speed);
         Debug.Log(Prop_Speed);
     }
@@ -117,4 +118,8 @@ public class Plane_Movement : MonoBehaviour
             transform.Translate(Vector3.up * -Gravity_Speed * Time.deltaTime);
         }
     }
+
+    
+
+    
 }
